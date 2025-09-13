@@ -3,7 +3,7 @@ name: Deploy to Firebase Hosting
 on:
   push:
     branches:
-      - main   # deploy when pushing to main
+      - main # deploy when pushing to main
 
 jobs:
   build-and-deploy:
@@ -16,10 +16,13 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: "18"
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Run tests
+        run: npm test -- --watchAll=false
 
       - name: Build React app
         run: npm run build
