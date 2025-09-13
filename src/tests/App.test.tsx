@@ -17,6 +17,6 @@ describe("App", () => {
 		await user.type(inputField, "Pravin");
 
 		const para = screen.getByTestId("input-content");
-		expect(para).toHaveTextContent(/Apple/i);
+		expect(para).toHaveTextContent(/Pravin/i);
 	});
 });
