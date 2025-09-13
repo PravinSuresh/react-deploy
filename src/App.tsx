@@ -17,10 +17,7 @@ function App() {
 					value={text}
 					onChange={handleInputChange}
 				/>
-				<p>Your input is {text}</p>
-				<p>
-					Edit <code>src/App.tsx</code> and save to test HMR
-				</p>
+				<p data-testId='input-content'>Your input is {text}</p>
 			</div>
 			<p className='read-the-docs'>
 				Click on the Vite and React logos to learn more
