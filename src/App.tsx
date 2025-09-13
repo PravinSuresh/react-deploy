@@ -13,6 +13,7 @@ function App() {
 			<h1>Deploy Vite + React</h1>
 			<div className='card'>
 				<input
+					data-testId='input'
 					value={text}
 					onChange={handleInputChange}
 				/>
